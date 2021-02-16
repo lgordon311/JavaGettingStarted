@@ -14,6 +14,7 @@ public class WeekOneExercisesPartOne {
 
     @Test
     // TODO Code: What is the least amount of code we need to make this test pass?
+    // hard code a 1 for actual results
     public void numberOfWholeSlicesForOnePizzaAndEightPeople() {
         int numberOfPeople = 8;
         int numberOfEightSlicePizzas = 1;
@@ -35,8 +36,9 @@ public class WeekOneExercisesPartOne {
     }
 
     @Test
-    @Disabled
+
     // TODO RESPONSE: What operator is used to determine remainders?
+    //Modulus %
     public void leftoversWithFivePeopleAndTwoPizzas() {
         int numberOfPeople = 5;
         int numberOfEightSlicePizzas = 2;
@@ -51,7 +53,8 @@ public class WeekOneExercisesPartOne {
     }
 
     private int determineLeftoverSlicesOfPizza(int numberOfPizzas, int numberOfPeople) {
-        return 0;
+
+        return (numberOfPizzas * 8) % numberOfPeople;
     }
 
     @Test
