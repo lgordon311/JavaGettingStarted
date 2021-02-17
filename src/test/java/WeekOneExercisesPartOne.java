@@ -85,5 +85,6 @@ public class WeekOneExercisesPartOne {
     private float calcSimpleInterest(float principal, float percentInterestRate, float numberOfYears) {
 
         return (principal * (.01f * percentInterestRate)) * numberOfYears + principal;
+
     }
 }

@@ -4,13 +4,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class WeekOneExercisesPartTwo {
-    // TODO: remove @Disabled attribute, make the test run green, and then move on to the next test
-    // TODO: remember to refactor after you have a green test (never refactor when you have a failing test)
-
-    // TODO Response: Why would you never refactor if you had a failing test?
+    /*
+     TODO: remove @Disabled attribute, make the test run green, and then move on to the next test
+     TODO: remember to refactor after you have a green test (never refactor when you have a failing test)
+     TODO Response: Why would you never refactor if you had a failing test?
+       When refactoring you don't want to change the results so you need to run the test clean prior to refactoring or
+         you may introduce more bugs.
+    */
 
     @Test
-    @Disabled
+
     public void bloodAlcoholLevelForAMale() {
         char gender = 'M';
         int weightInPounds = 185;
