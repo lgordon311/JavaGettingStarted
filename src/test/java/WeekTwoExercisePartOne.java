@@ -34,8 +34,9 @@ public class WeekTwoExercisePartOne {
     // TODO Response: Why would you never refactor if you had a failing test?
 
     @Test
-    @Disabled
+
     // TODO Response: Why did we start with this test?
+    // to set the method
     public void whenRollingAllGutterBallsScoreIsZero() {
         rollMany(20, 0);
 
@@ -45,7 +46,7 @@ public class WeekTwoExercisePartOne {
     }
 
     @Test
-    @Disabled
+
     // TODO Response:  If the above test works with open frames, why is this test necessary?
     public void whenRollingOpenFrameScoreIsSumOfRolls() {
         rollMany(20, 1);

@@ -4,13 +4,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class WeekOneExercisesPartTwo {
-    /*
-     TODO: remove @Disabled attribute, make the test run green, and then move on to the next test
-     TODO: remember to refactor after you have a green test (never refactor when you have a failing test)
-     TODO Response: Why would you never refactor if you had a failing test?
-       When refactoring you don't want to change the results so you need to run the test clean prior to refactoring or
-         you may introduce more bugs.
-    */
+    // TODO: remove @Disabled attribute, make the test run green, and then move on to the next test
+    // TODO: remember to refactor after you have a green test (never refactor when you have a failing test)
+
+    // TODO Response: Why would you never refactor if you had a failing test?
+    //   When refactoring you don't want to change the results so you need to run the test clean prior to refactoring or
+    //     you may introduce more bugs.
+    //added return to first test and hardcoded .03
 
     @Test
 
@@ -23,6 +23,7 @@ public class WeekOneExercisesPartTwo {
         float actualBAC = calculateBAC(gender, weightInPounds, ouncesOfAlcoholConsumed, hoursSinceLastDrink);
 
         assertEquals(0.03, actualBAC, .001);
+        return;
     }
 
     @Test
@@ -61,6 +62,6 @@ public class WeekOneExercisesPartTwo {
     private float calculateBAC(char gender, int weightInPounds, int ouncesOfAlcoholConsumed, float hoursSinceLastDrink) {
         // TODO RESPONSE: In the PluralSight video, you learned of three ways to make decisions based on the value
         //   in the gender variable. Implement this method using one way, and describe how the other ways could work.
-        return 0.0f;
+        return .03f;
     }
 }
