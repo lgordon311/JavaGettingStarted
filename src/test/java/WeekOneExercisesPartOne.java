@@ -62,9 +62,10 @@ public class WeekOneExercisesPartOne {
     // TODO RESPONSE: In the variable declarations below, why is it necessary to place
     //  an 'f' after 4.3 but not after 1500 or 4?
     // because 4.3 has a fraction and the other two do not
+    // updated interestRateAsAPercent from 4.3 to .043 and added calc for interest rate
     public void simpleInterestReturnsCorrectAmount() {
         float principalAmount = 1500;
-        float interestRateAsAPercent = 4.3f;
+        float interestRateAsAPercent = .043f;
         float termOfInvestmentInYears = 4;
 
         float actualInvestmentValue = calcSimpleInterest(principalAmount, interestRateAsAPercent, termOfInvestmentInYears);
@@ -84,7 +85,7 @@ public class WeekOneExercisesPartOne {
      */
     private float calcSimpleInterest(float principal, float percentInterestRate, float numberOfYears) {
 
-        return (principal * (.01f * percentInterestRate)) * numberOfYears + principal;
+        return ((principal * percentInterestRate) * numberOfYears)+ principal;
 
     }
 }
