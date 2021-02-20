@@ -18,25 +18,27 @@ public class WeekOneExercisesPartTwo {
 
     public void bloodAlcoholLevelForAMale() {
         char gender = 'M';
+        float genderRate = .73f;
         int weightInPounds = 185;
         int ouncesOfAlcoholConsumed = 3;
         float hoursSinceLastDrink = 2;
 
-        float actualBAC = calculateBAC(gender, weightInPounds, ouncesOfAlcoholConsumed, hoursSinceLastDrink);
+        float actualBAC = calculateBAC(gender, genderRate, weightInPounds, ouncesOfAlcoholConsumed, hoursSinceLastDrink);
 
         assertEquals(0.03, actualBAC, .001);
         return;
     }
 
     @Test
-    @Disabled
+
     public void bloodAlcoholLevelForAFemale() {
         char gender = 'F';
+        float genderRate = .66f;
         int weightInPounds = 135;
         int ouncesOfAlcoholConsumed = 5;
         float hoursSinceLastDrink = 1;
 
-        float actualBAC = calculateBAC(gender, weightInPounds, ouncesOfAlcoholConsumed, hoursSinceLastDrink);
+        float actualBAC = calculateBAC(gender, genderRate, weightInPounds, ouncesOfAlcoholConsumed, hoursSinceLastDrink);
 
         assertEquals(0.11, actualBAC, .001);
     }
@@ -58,13 +60,13 @@ public class WeekOneExercisesPartTwo {
      * @param weightInPounds
      * @param ouncesOfAlcoholConsumed
      * @param hoursSinceLastDrink
+     * @param genderRate
      * @return
      */
 
-    private float calculateBAC(char gender, int weightInPounds, int ouncesOfAlcoholConsumed, float hoursSinceLastDrink) {
+    private float calculateBAC(char gender, float genderRate, int weightInPounds, int ouncesOfAlcoholConsumed, float hoursSinceLastDrink) {
         // TODO RESPONSE: In the PluralSight video, you learned of three ways to make decisions based on the value
         //   in the gender variable. Implement this method using one way, and describe how the other ways could work.
-        return //((ouncesOfAlcoholConsumed * 5.14f)/
-                ((5.14f/weightInPounds) * ouncesOfAlcoholConsumed * .73f)-(2*.015f) ;
+        return ((5.14f/weightInPounds) * ouncesOfAlcoholConsumed * genderRate)-(hoursSinceLastDrink*.015f) ;
     }
 }
