@@ -10,7 +10,9 @@ public class WeekOneExercisesPartTwo {
     // TODO Response: Why would you never refactor if you had a failing test?
     //   When refactoring you don't want to change the results so you need to run the test clean prior to refactoring or
     //     you may introduce more bugs.
+
     //added return to first test and hardcoded .03
+    // I didn't know i was going to learn math equations too, LOL!
 
     @Test
 
@@ -62,6 +64,7 @@ public class WeekOneExercisesPartTwo {
     private float calculateBAC(char gender, int weightInPounds, int ouncesOfAlcoholConsumed, float hoursSinceLastDrink) {
         // TODO RESPONSE: In the PluralSight video, you learned of three ways to make decisions based on the value
         //   in the gender variable. Implement this method using one way, and describe how the other ways could work.
-        return .03f;
+        return //((ouncesOfAlcoholConsumed * 5.14f)/
+                ((5.14f/weightInPounds) * ouncesOfAlcoholConsumed * .73f)-(2*.015f) ;
     }
 }
