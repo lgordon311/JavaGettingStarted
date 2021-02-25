@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class WeekTwoExercisePartOne {
+public class WeekTwoExercisePartOne<whenRollingAllGutterBallsScoreIsZero> {
 
     /**
      * We can briefly summarize the scoring rules for bowling:
@@ -32,11 +32,13 @@ public class WeekTwoExercisePartOne {
     // TODO: remember to refactor after you have a green test (never refactor when you have a failing test)
 
     // TODO Response: Why would you never refactor if you had a failing test?
+    // You could break more than you bargained for.
 
     @Test
 
     // TODO Response: Why did we start with this test?
-    // to set the method
+    // This is the least complex - if they gutter each time 0 pins are counted.
+
     public void whenRollingAllGutterBallsScoreIsZero() {
         rollMany(20, 0);
 
@@ -47,7 +49,8 @@ public class WeekTwoExercisePartOne {
 
     @Test
 
-    // TODO Response:  If the above test works with open frames, why is this test necessary?
+    // TODO Response:  If the above test works with gutter ball, why is this test necessary?
+    // This will add the pins knocked down per frame when no spare or strike.
     public void whenRollingOpenFrameScoreIsSumOfRolls() {
         rollMany(20, 1);
 
