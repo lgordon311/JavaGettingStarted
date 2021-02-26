@@ -1,6 +1,8 @@
 
+import java.time.DayOfWeek;
 import java.time.LocalDate;
 
+import com.sun.org.apache.bcel.internal.generic.RET;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -42,7 +44,7 @@ public class WeekTwoExercisePartThree {
     }
 
     @Test
-    @Disabled
+
     public void sendingNotAFridayTheThirteenthDateReturnsFalse() {
         // TODO: Implement the code to make this test pass
         // TODO: don't forget to commit after passing the test
@@ -106,7 +108,16 @@ public class WeekTwoExercisePartThree {
         return localDates;
     }
 
-    public boolean isUnluckyDate(int year, int month, int day) {
-        return true;
+    public boolean isUnluckyDate(int year, int month, int day)
+    {
+        if ( day == 13)
+    {
+        LocalDate dateInQuestion = LocalDate.of(year,month,day);
+        if(dateInQuestion.getDayOfWeek() == DayOfWeek.FRIDAY)
+            return true;
+
+    }
+
+        return false;
     }
 }
