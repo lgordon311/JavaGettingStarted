@@ -14,10 +14,7 @@ plugins {
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
     targetCompatibility = JavaVersion.VERSION_1_8
-<<<<<<< HEAD
 
-=======
->>>>>>> 190b4e83b581c1d9ffee7a9ba8592552797c9470
 }
 
 repositories {
